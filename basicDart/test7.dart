@@ -8,9 +8,9 @@ void main() {
 
   // Rules Permainan
   Map<String, String> rules = {
-    "Batu": "Gunting",
-    "Gunting": "Kertas",
-    "Kertas": "Batu"
+    "batu": "gunting",
+    "gunting": "kertas",
+    "kertas": "batu"
   };
 
   // Inisialisai Skor
@@ -18,15 +18,15 @@ void main() {
   int komp = 0;
 
   // pilihan untuk komputer memilih
-  List<String> pilihan = ["Batu", "Kertas", "Gunting"];
+  List<String> pilihan = ["batu", "kertas", "gunting"];
 
-  // Actual game
+  // game dimulai
   while (true) {
     String KompPilih = pilihan[random.nextInt(pilihan.length)];
     stdout.write("\nTolong pilih Batu, Kertas atau Gunting: ");
     String userPilih = stdin.readLineSync()!.toLowerCase();
 
-    if (userPilih == "exit") {
+    if (userPilih == "keluar") {
       print("\nKamu: $user Komputer: $komp\nBye Bye!");
       break;
     }
